@@ -10,3 +10,16 @@ Currently, two official plugins are available:
 ## Expanding the ESLint configuration
 
 If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+HomeBite - Modern Food Delivery Platform
+
+A full-stack food delivery web application built with React and Firebase. Features a modern UI using Tailwind CSS, smooth animations with Framer Motion, and responsive design. The platform connects food providers with customers, offering a seamless ordering experience.
+
+Tech Stack:
+- React + Vite
+- Firebase (Authentication & Database)
+- Tailwind CSS
+- Framer Motion
+- React Router
+- Headless UI
