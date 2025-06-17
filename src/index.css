@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+  }
+
+  body {
+    @apply bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300;
+  }
+
+  input, textarea, select {
+    @apply text-gray-900 dark:text-gray-100;
+    color: #1a202c !important; /* Tailwind's gray-900 */
+  }
+
+  input::placeholder, textarea::placeholder, select::placeholder {
+    color: #6b7280 !important; /* Tailwind's gray-400 */
+    opacity: 1 !important;
+  }
+
+  .dark input::placeholder, .dark textarea::placeholder, .dark select::placeholder {
+    color: #e5e7eb !important; /* Tailwind's gray-200 */
+    opacity: 1 !important;
+  }
+}
+
+/* Move this OUTSIDE @layer base for higher specificity */
+.dark input, .dark textarea, .dark select {
+  color: #fff !important; /* Pure white for dark mode */
+}
+
+/* Custom scrollbar styles */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-100 dark:bg-gray-800;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-300 dark:bg-gray-600 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-400 dark:bg-gray-500;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:active {
+  -webkit-text-fill-color: #1a202c !important; /* Tailwind's gray-900 */
+  transition: background-color 9999s ease-in-out 0s;
+}
+
+.dark input:-webkit-autofill,
+.dark input:-webkit-autofill:focus,
+.dark input:-webkit-autofill:hover,
+.dark input:-webkit-autofill:active {
+  -webkit-text-fill-color: #fff !important; /* Pure white for dark mode */
+}
