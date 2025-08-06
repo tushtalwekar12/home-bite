@@ -23,3 +23,5 @@ Tech Stack:
 - Framer Motion
 - React Router
 - Headless UI
+
+View Project Live Link - https://home-bite-mocha.vercel.app/
